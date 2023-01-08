@@ -112,13 +112,13 @@ class DeliveryNote
         $this->template = 'default';
 
         // Date
-        $this->date           = Carbon::now();
-        $this->date_format    = config('delivery-notes.date.format');
+        $this->date = Carbon::now();
+        $this->date_format = config('delivery-notes.date.format');
 
         // Serial Number
-        $this->series               = config('delivery-notes.serial_number.series');
-        $this->sequence_padding     = config('delivery-notes.serial_number.sequence_padding');
-        $this->delimiter            = config('delivery-notes.serial_number.delimiter');
+        $this->series = config('delivery-notes.serial_number.series');
+        $this->sequence_padding = config('delivery-notes.serial_number.sequence_padding');
+        $this->delimiter = config('delivery-notes.serial_number.delimiter');
         $this->serial_number_format = config('delivery-notes.serial_number.format');
         $this->sequence(config('delivery-notes.serial_number.sequence'));
 
@@ -141,7 +141,7 @@ class DeliveryNote
         return new static($name);
     }
 
-    public static function makeParty(array $attributes = []): DeliveryNoteParty
+    public static function makeParty(array $attributes = [])
     {
         return new DeliveryNoteParty($attributes);
     }
