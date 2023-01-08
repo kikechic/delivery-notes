@@ -1,5 +1,5 @@
 {
-    "name": "kikechi/delivery-notes",
+    "name": "kikechic/delivery-notes",
     "description": "This package helps generate pdf files for delivery notes",
     "autoload": {
         "psr-4": {
