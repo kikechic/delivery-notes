@@ -182,7 +182,7 @@ class DeliveryNote
         $this->beforeRender();
 
         $template = sprintf('delivery-notes::templates.%s', $this->template);
-        $view     = View::make($template, ['delivery-note' => $this]);
+        $view     = View::make($template, ['deliveryNote' => $this]);
         $html     = mb_convert_encoding($view, 'HTML-ENTITIES', 'UTF-8');
 
         $this->pdf    = Pdf::setOption(['enable_php' => true])->loadHtml($html);
