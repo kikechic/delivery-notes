@@ -11,6 +11,7 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\View;
 use Kikechi\DeliveryNotes\Classes\DeliveryNoteItem;
 use Kikechi\DeliveryNotes\Classes\DeliveryNoteParty;
+use Kikechi\DeliveryNotes\Contracts\DeliveryNotePartyContract;
 use Kikechi\DeliveryNotes\Traits\DeliveryNoteDateFormatter;
 use Kikechi\DeliveryNotes\Traits\DeliveryNoteHelpers;
 use Kikechi\DeliveryNotes\Traits\DeliveryNoteSavesFiles;
