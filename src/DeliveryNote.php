@@ -32,6 +32,11 @@ class DeliveryNote
     public $name;
 
     /**
+     * @var string
+     */
+    public $invoice_number;
+
+    /**
      * @var DeliveryNotePartyContract
      */
     public $seller;
