@@ -5,6 +5,7 @@ return [
     'serial' => 'Serial No.',
     'date' => 'Transaction date',
     'seller' => 'Seller',
+    'buyer' => 'Buyer',
     'invoice_number' => 'Invoice No.',
     'address' => 'Address',
     'code' => 'Code',
