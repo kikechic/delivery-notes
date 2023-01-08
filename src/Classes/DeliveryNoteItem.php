@@ -11,7 +11,9 @@ class DeliveryNoteItem
 
     public string|bool $description = false;
 
-    public string|null $units;
+    public string $units;
+
+    public string $code;
 
     public float $quantity;
 
@@ -30,6 +32,12 @@ class DeliveryNoteItem
     public function description(string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function code(string $code): self {
+        $this->code = $code;
 
         return $this;
     }
