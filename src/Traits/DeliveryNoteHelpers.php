@@ -2,6 +2,8 @@
 
 namespace Kikechi\DeliveryNotes\Traits;
 
+use Exception;
+use Illuminate\Support\Str;
 use Kikechi\DeliveryNotes\Classes\DeliveryNoteParty;
 
 trait DeliveryNoteHelpers
