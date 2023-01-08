@@ -157,6 +157,10 @@ trait DeliveryNoteHelpers
      */
     protected function calculate()
     {
+        $this->items->each(function ($item) {
+            !$item->hasUnits() || ($this->hasItemUnits = true);
+        });
+        
         $this->applyColspan();
 
         return $this;
