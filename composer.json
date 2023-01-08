@@ -1,0 +1,16 @@
+{
+    "name": "kikechi/delivery-notes",
+    "description": "This package helps generate pdf files for delivery notes",
+    "autoload": {
+        "psr-4": {
+            "Kikechi\\DeliveryNotes\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "kikechic",
+            "email": "96387806+kikechic@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
