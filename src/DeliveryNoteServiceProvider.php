@@ -100,7 +100,7 @@ class DeliveryNoteServiceProvider extends ServiceProvider
      */
     protected function registerServices(): void
     {
-        $this->app->singleton('deliveryNote', function ($app) {
+        $this->app->singleton('delivery-note', function ($app) {
             return new DeliveryNote;
         });
     }
@@ -127,6 +127,6 @@ class DeliveryNoteServiceProvider extends ServiceProvider
      */
     public function provides(): array
     {
-        return ['deliveryNote'];
+        return ['delivery-note'];
     }
 }
