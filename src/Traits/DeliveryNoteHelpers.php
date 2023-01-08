@@ -21,7 +21,7 @@ trait DeliveryNoteHelpers
     /**
      * @return $this
      */
-    public function status(string $status)
+    public function status(string|null $status)
     {
         $this->status = $status;
 
