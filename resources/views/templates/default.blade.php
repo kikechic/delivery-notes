@@ -270,8 +270,8 @@
             <td class="pl-0">
                 {{ $loop->iteration }}
             </td>
-            <td class="text-center">{{ $item->code }}</td>
-            <td class="pl-0">
+            <td>{{ $item->code }}</td>
+            <td>
                 {{ $item->title }}
 
                 @if($item->description)
