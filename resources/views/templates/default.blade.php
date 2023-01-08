@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{{ $invoice->name }}</title>
+    <title>{{ $deliveryNote->name }}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
     <style type="text/css" media="screen">
@@ -130,8 +130,8 @@
 
 <body>
 {{-- Header --}}
-@if($invoice->logo)
-    <img src="{{ $invoice->getLogo() }}" alt="logo" height="100">
+@if($deliveryNote->logo)
+    <img src="{{ $deliveryNote->getLogo() }}" alt="logo" height="100">
 @endif
 
 <table class="table mt-5">
@@ -139,17 +139,17 @@
     <tr>
         <td class="border-0 pl-0" style="width: 70%;">
             <h4 class="text-uppercase">
-                <strong>{{ $invoice->name }}</strong>
+                <strong>{{ $deliveryNote->name }}</strong>
             </h4>
         </td>
         <td class="border-0 pl-0">
-            @if($invoice->status)
+            @if($deliveryNote->status)
                 <h4 class="text-uppercase cool-gray">
-                    <strong>{{ $invoice->status }}</strong>
+                    <strong>{{ $deliveryNote->status }}</strong>
                 </h4>
             @endif
-            <p>{{ __('delivery-notes::delivery-note.serial') }} <strong>{{ $invoice->getSerialNumber() }}</strong></p>
-            <p>{{ __('delivery-notes::delivery-note.date') }}: <strong>{{ $invoice->getDate() }}</strong></p>
+            <p>{{ __('delivery-notes::delivery-note.serial') }} <strong>{{ $deliveryNote->getSerialNumber() }}</strong></p>
+            <p>{{ __('delivery-notes::delivery-note.date') }}: <strong>{{ $deliveryNote->getDate() }}</strong></p>
         </td>
     </tr>
     </tbody>
@@ -171,37 +171,37 @@
     <tbody>
     <tr>
         <td class="px-0">
-            @if($invoice->seller->name)
+            @if($deliveryNote->seller->name)
                 <p class="seller-name">
-                    <strong>{{ $invoice->seller->name }}</strong>
+                    <strong>{{ $deliveryNote->seller->name }}</strong>
                 </p>
             @endif
 
-            @if($invoice->seller->address)
+            @if($deliveryNote->seller->address)
                 <p class="seller-address">
-                    {{ __('delivery-notes::delivery-note.address') }}: {{ $invoice->seller->address }}
+                    {{ __('delivery-notes::delivery-note.address') }}: {{ $deliveryNote->seller->address }}
                 </p>
             @endif
 
-            @if($invoice->seller->code)
+            @if($deliveryNote->seller->code)
                 <p class="seller-code">
-                    {{ __('delivery-notes::delivery-note.code') }}: {{ $invoice->seller->code }}
+                    {{ __('delivery-notes::delivery-note.code') }}: {{ $deliveryNote->seller->code }}
                 </p>
             @endif
 
-            @if($invoice->seller->vat)
+            @if($deliveryNote->seller->vat)
                 <p class="seller-vat">
-                    {{ __('delivery-notes::delivery-note.vat') }}: {{ $invoice->seller->vat }}
+                    {{ __('delivery-notes::delivery-note.vat') }}: {{ $deliveryNote->seller->vat }}
                 </p>
             @endif
 
-            @if($invoice->seller->phone)
+            @if($deliveryNote->seller->phone)
                 <p class="seller-phone">
-                    {{ __('delivery-notes::delivery-note.phone') }}: {{ $invoice->seller->phone }}
+                    {{ __('delivery-notes::delivery-note.phone') }}: {{ $deliveryNote->seller->phone }}
                 </p>
             @endif
 
-            @foreach($invoice->seller->custom_fields as $key => $value)
+            @foreach($deliveryNote->seller->custom_fields as $key => $value)
                 <p class="seller-custom-field">
                     {{ ucfirst($key) }}: {{ $value }}
                 </p>
@@ -209,37 +209,37 @@
         </td>
         <td class="border-0"></td>
         <td class="px-0">
-            @if($invoice->buyer->name)
+            @if($deliveryNote->buyer->name)
                 <p class="buyer-name">
-                    <strong>{{ $invoice->buyer->name }}</strong>
+                    <strong>{{ $deliveryNote->buyer->name }}</strong>
                 </p>
             @endif
 
-            @if($invoice->buyer->address)
+            @if($deliveryNote->buyer->address)
                 <p class="buyer-address">
-                    {{ __('delivery-notes::delivery-note.address') }}: {{ $invoice->buyer->address }}
+                    {{ __('delivery-notes::delivery-note.address') }}: {{ $deliveryNote->buyer->address }}
                 </p>
             @endif
 
-            @if($invoice->buyer->code)
+            @if($deliveryNote->buyer->code)
                 <p class="buyer-code">
-                    {{ __('delivery-notes::delivery-note.code') }}: {{ $invoice->buyer->code }}
+                    {{ __('delivery-notes::delivery-note.code') }}: {{ $deliveryNote->buyer->code }}
                 </p>
             @endif
 
-            @if($invoice->buyer->vat)
+            @if($deliveryNote->buyer->vat)
                 <p class="buyer-vat">
-                    {{ __('delivery-notes::delivery-note.vat') }}: {{ $invoice->buyer->vat }}
+                    {{ __('delivery-notes::delivery-note.vat') }}: {{ $deliveryNote->buyer->vat }}
                 </p>
             @endif
 
-            @if($invoice->buyer->phone)
+            @if($deliveryNote->buyer->phone)
                 <p class="buyer-phone">
-                    {{ __('delivery-notes::delivery-note.phone') }}: {{ $invoice->buyer->phone }}
+                    {{ __('delivery-notes::delivery-note.phone') }}: {{ $deliveryNote->buyer->phone }}
                 </p>
             @endif
 
-            @foreach($invoice->buyer->custom_fields as $key => $value)
+            @foreach($deliveryNote->buyer->custom_fields as $key => $value)
                 <p class="buyer-custom-field">
                     {{ ucfirst($key) }}: {{ $value }}
                 </p>
@@ -256,7 +256,7 @@
         <th scope="col" class="border-0 pl-0">{{ __('delivery-notes::delivery-note.number') }}</th>
         <th scope="col" class="border-0">{{ __('delivery-notes::delivery-note.code') }}</th>
         <th scope="col" class="border-0">{{ __('delivery-notes::delivery-note.description') }}</th>
-        @if($invoice->hasItemUnits)
+        @if($deliveryNote->hasItemUnits)
             <th scope="col" class="text-center border-0">{{ __('delivery-notes::delivery-note.units') }}</th>
         @endif
         <th scope="col" class="text-center border-0">{{ __('delivery-notes::delivery-note.quantity') }}</th>
@@ -264,7 +264,7 @@
     </thead>
     <tbody>
     {{-- Items --}}
-    @foreach($invoice->items as $item)
+    @foreach($deliveryNote->items as $item)
         <tr>
             <td class="pl-0">
                 {{ $loop->iteration }}
@@ -277,7 +277,7 @@
                     <p class="cool-gray">{{ $item->description }}</p>
                 @endif
             </td>
-            @if($invoice->hasItemUnits)
+            @if($deliveryNote->hasItemUnits)
                 <td class="text-center">{{ $item->units }}</td>
             @endif
             <td class="text-center">{{ $item->quantity }}</td>
@@ -286,9 +286,9 @@
     </tbody>
 </table>
 
-@if($invoice->notes)
+@if($deliveryNote->notes)
     <p>
-        {{ trans('delivery-notes::delivery-note.notes') }}: {!! $invoice->notes !!}
+        {{ trans('delivery-notes::delivery-note.notes') }}: {!! $deliveryNote->notes !!}
     </p>
 @endif
 <script type="text/php">
