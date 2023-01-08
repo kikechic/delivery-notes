@@ -41,7 +41,7 @@ trait DeliveryNoteHelpers
     /**
      * @return $this
      */
-    public function seller(DeliveryNotePartyContract $seller)
+    public function seller(DeliveryNoteParty $seller)
     {
         $this->seller = $seller;
 
@@ -51,7 +51,7 @@ trait DeliveryNoteHelpers
     /**
      * @return $this
      */
-    public function buyer(DeliveryNotePartyContract $buyer)
+    public function buyer(DeliveryNoteParty $buyer)
     {
         $this->buyer = $buyer;
 
