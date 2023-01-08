@@ -150,6 +150,7 @@
             @endif
             <p>{{ __('delivery-notes::delivery-note.serial') }} <strong>{{ $deliveryNote->getSerialNumber() }}</strong></p>
             <p>{{ __('delivery-notes::delivery-note.date') }}: <strong>{{ $deliveryNote->getDate() }}</strong></p>
+            <p>{{ __('delivery-notes::delivery-note.invoice_number') }}: <strong>{{ $deliveryNote->getInvoiceNumber() }}</strong></p>
         </td>
     </tr>
     </tbody>
