@@ -2,6 +2,8 @@
 
 namespace Kikechi\DeliveryNotes\Traits;
 
+use Kikechi\DeliveryNotes\Classes\DeliveryNoteParty;
+
 trait DeliveryNoteHelpers
 {
     /**
