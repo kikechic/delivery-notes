@@ -62,6 +62,17 @@ trait DeliveryNoteHelpers
         return $this;
     }
 
+    public function setInvoiceNumber(string $invoice_number)
+    {
+        $this->invoice_number = $invoice_number;
+        return $this;
+    }
+
+    public function getInvoiceNumber()
+    {
+        return $this->invoice_number;
+    }
+
     /**
      * @param mixed
      * @param mixed $value
